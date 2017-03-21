@@ -4,7 +4,7 @@ form#create_account{
 fieldset#signup{
     width: 360px;
     height: 480px;
-    margin: 50% auto;
+    margin: 10% auto;
 }
 fieldset#signup ul{
     list-style: none;
