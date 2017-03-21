@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册账号</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    <form id="create_account" action="/signup" method="post">
+        <fieldset id="signup">
+            <legend>Create New Account</legend>
+            <ul>
+                <li>
+                    <label for="first_name">First Name(名)</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="瑞阳" autofocus>
+                </li>
+
+                <li>
+                    <label for="last_name">Last Name(姓)</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="郭">
+                </li>
+
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="user@example.com">
+                </li>
+
+                <li>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="8-10 characters">
+                </li>
+
+                <li>
+                    <label for="password_confirmation">Password Confirmation</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Type your password again">
+                </li>
+
+                <li>
+                    <div id="v_container" style="width: 200px; height: 50px"></div>
+                    <input type="text" id="verify" name="verify" placeholder="输入上图中的字符">
+                    <button id="my_button">验证</button>
+                </li>
+
+                <li><input type="submit" value="Sign Up"></li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+<script src="gVerify.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var verifyCode = new GVerify("v_container");
+
+    document.getElementById("my_button").onclick = function(){
+        var res = verifyCode.validate(document.getElementById("verify").value);
+        if(res){
+            alert("正确");
+        }
+        else{
+            alert("验证失败");
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,22 @@
+form#create_account{
+
+}
+fieldset#signup{
+    width: 360px;
+    height: 480px;
+    margin: 50% auto;
+}
+fieldset#signup ul{
+    list-style: none;
+}
+fieldset#signup ul li{
+    margin-top: 10px;
+}
+fieldset#signup ul li label input{
+    font-size: 16px;
+    font-family: Arial;
+}
+
+div#v_container{
+    display: inline;
+}
